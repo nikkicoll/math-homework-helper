@@ -109,36 +109,6 @@
 
         </style>
 
-        <!--Javascript code for addition and subtraction problem generator-->
-
-        <script>
-        //To create one problem
-		  function single_problem() {
-		    var operator = "+";
-		    if (Math.random() < .5) {
-		      operator = "-";
-		    }
-		//Generates new problems adding/subtracting between 1 and 19
-		    var a = Math.floor(Math.random()*10 + 10);
-		    var b = Math.floor(Math.random()*(a-1) + 1);
-		    var c = a - b;
-
-		    if (operator === "+") {
-		      var top = b;
-		      var bottom = c;
-		    } else {
-		      var top = a;
-		      var bottom = b;
-		    }
-		//Create table with a problem
-		    return '<table class="problem">' +
-		                   '<tr><td></td><td>' + top + '</td></tr>' +
-		                   '<tr><td>' + operator + '</td><td>' + bottom + '</td></tr>' +
-		                   '</table>';
-		  }
-
-  		</script>
-
   		<!--Want student to type in their name and respond: "Hello, + name !"-->
   		<div class="student-name">
 		<form>
@@ -152,8 +122,6 @@
 	</head>
 
 	<body>
-
-		<pre id="response"></pre>
 
 		<div class="header">
 
@@ -179,28 +147,27 @@
 
 	    <h2 class= "daily-lesson" id="video">videos</h2>
 
+	    <select id="topic-selection">
+	    	<option value="cc-7th-add-negatives">Adding negative numbers</option>
+	    	<option value="cc-7th-sub-neg-intro">Subtracting negative numbers</option>
+	    </select>
+	    <div> 
+	    	<ul id="video-list">
+
+	    	</ul>
+	    </div>
 
     	<h2 class= "daily-lesson" id="homework">homework</h2>
 
-	  	<table id="whole">
 
-	    <script>
-	    //Loop through single problems and post table with 5 by 5 
-	    	for (i=0; i<5; i++){
-		      document.write("<tr>");
-		      for (j=0; j<5; j++) {
-		        document.write('<td>' + single_problem() + '</td>');
-		      }
-		      document.write('</tr>');
-		    }
-
-	    </script>
 
 	  	</table>
 
     	</div>
 
     	<script type="text/javascript">
+
+
 
     	</script>
 
