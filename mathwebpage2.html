@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+        <title>Math | Homework</title>
+
+    <!--All CSS goes here-->
+        <style type="text/css">
+
+        	body {
+        		font-family: Cambria, Georgia, serif;
+        	}
+
+        	.header {
+        		padding: 10px 25px 25px 25px;
+        		margin: 15px auto 0 auto;
+        	}
+
+        	.main-content {
+        		border-style: solid;
+        		border-color: black;
+        		padding: 10px 25px 25px 25px;
+        		width: 900px;
+        		margin: 20px auto 0 auto;
+        	}
+
+        	h1 {
+        		font-size: 45px;
+        		text-align: center;
+        		border-bottom: 2px solid #CCCCCC;
+        		padding-bottom: 8px;
+        	}
+
+        	ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			}
+
+			li {
+    			float: center;
+			}
+
+			li a {
+				margin: auto auto;
+				width: 200px;
+			    display: block;
+			    color: black;
+			    text-align: center;
+			    padding: 8px 10px;
+			    text-decoration: none;
+			}
+
+        	.daily-lesson {
+        		border-bottom: 2px solid rgb(221,160,221);
+        		padding-bottom: 3px;
+        	}
+
+        	p {
+        		text-align: center;
+        	}
+
+        	label, input {
+        		display: block;
+        	}
+
+        	label {
+        		font-size: 17px;
+        		margin-bottom: 3px;
+        	}
+
+        	input {
+        		width: 125px;
+        		margin-bottom: 10px;
+        	}
+
+        	input[type=submit] {
+        		width: 100px;
+        		font-size: 15px;
+        	}
+
+			#whole {
+			    margin-left: auto;
+			    margin-right: auto;
+			  }
+
+			table.problem {
+			    font-family: Sans-Serif;
+			    font-size: 24px;
+			    text-align: right;
+			    border-bottom: solid;
+			    margin: 40px;
+			  }
+
+			iframe {
+				margin-left: auto;
+    			margin-right: auto;
+    			display: block
+			}
+
+			.movie-title {
+				text-align: center;
+			}
+
+        </style>
+
+        <!--Javascript code for addition and subtraction problem generator-->
+
+        <script>
+        //To create one problem
+		  function single_problem() {
+		    var operator = "+";
+		    if (Math.random() < .5) {
+		      operator = "-";
+		    }
+		//Generates new problems adding/subtracting between 1 and 19
+		    var a = Math.floor(Math.random()*10 + 10);
+		    var b = Math.floor(Math.random()*(a-1) + 1);
+		    var c = a - b;
+
+		    if (operator === "+") {
+		      var top = b;
+		      var bottom = c;
+		    } else {
+		      var top = a;
+		      var bottom = b;
+		    }
+		//Create table with a problem
+		    return '<table class="problem">' +
+		                   '<tr><td></td><td>' + top + '</td></tr>' +
+		                   '<tr><td>' + operator + '</td><td>' + bottom + '</td></tr>' +
+		                   '</table>';
+		  }
+
+  		</script>
+
+  		<!--Want student to type in their name and respond: "Hello, + name !"-->
+  		<div class="student-name">
+		<form>
+			<label for="name">student name </label>
+			<input type="text" id="name">
+			<button id="button" type="button">submit</button>
+				<div id="message"></div>
+		</form>
+		</div>
+
+	</head>
+
+	<body>
+
+		<pre id="response"></pre>
+
+		<div class="header">
+
+		<h1>welcome | 1st grade math </h1>
+
+		<ul>
+	  		<li><a class="active" href="https://jefferson-sfusd-ca.schoolloop.com/">schoolloop</a></li>
+	  		<li><a href="file:///Users/nicolegalusha/Desktop/HR%20Admissions/Math%20Website/contact-me.html">contact</a></li>
+		</ul>
+
+	    </div>
+
+	    <div class="main-content">
+
+		<p> Hello Scholars! <br>
+		<br>
+	    This is our class website where you'll find your weekly math homework. <br>
+	    <br>
+	    <strong>Please watch the video before beginning your daily practice.<br></strong>
+	    <br>
+	    Remember: you must practice at least 10 problems per night. Have fun!</p>
+
+
+	    <h2 class= "daily-lesson" id="video">videos</h2>
+
+
+    	<h2 class= "daily-lesson" id="homework">homework</h2>
+
+	  	<table id="whole">
+
+	    <script>
+	    //Loop through single problems and post table with 5 by 5 
+	    	for (i=0; i<5; i++){
+		      document.write("<tr>");
+		      for (j=0; j<5; j++) {
+		        document.write('<td>' + single_problem() + '</td>');
+		      }
+		      document.write('</tr>');
+		    }
+
+	    </script>
+
+	  	</table>
+
+    	</div>
+
+    	<script type="text/javascript">
+
+    	</script>
+
+	</body>
+
+
+</html>
+
+
