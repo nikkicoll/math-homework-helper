@@ -1,0 +1,95 @@
+body {
+    font-family: Cambria, Georgia, serif;
+}
+
+.header {
+	padding: 10px 25px 25px 25px;
+	margin: 15px auto 0 auto;
+}
+
+.main-content {
+	border-style: solid;
+	border-color: black;
+	padding: 10px 25px 25px 25px;
+	width: 900px;
+	margin: 20px auto 0 auto;
+}
+
+h1 {
+	font-size: 45px;
+	text-align: center;
+	border-bottom: 2px solid #CCCCCC;
+	padding-bottom: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+	float: center;
+}
+
+li a {
+	margin: auto auto;
+	width: 200px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+.daily-lesson {
+	border-bottom: 2px solid rgb(221,160,221);
+	padding-bottom: 3px;
+}
+
+p {
+	text-align: center;
+}
+
+label, input {
+	display: block;
+}
+
+label {
+	font-size: 17px;
+	margin-bottom: 3px;
+}
+
+input {
+	width: 125px;
+	margin-bottom: 10px;
+}
+
+input[type=submit] {
+	width: 100px;
+	font-size: 15px;
+}
+
+#whole {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+table.problem {
+    font-family: Sans-Serif;
+    font-size: 24px;
+    text-align: right;
+    border-bottom: solid;
+    margin: 40px;
+  }
+
+iframe {
+	margin-left: auto;
+	margin-right: auto;
+	display: block
+}
+
+.movie-title {
+	text-align: center;
+}
