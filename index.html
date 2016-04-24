@@ -5,14 +5,15 @@
         <title>Math | Homework</title>
     	<!--All CSS goes here-->
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
 	<body>
 		<div class="header">
 			<h1>welcome | math 7 </h1>
-			<ul>
-		  		<li><a class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042">schoolloop</a></li>
-		  		<li><a href="contact-me.html">contact</a></li>
-			</ul>
+			<div class="row">
+		  		<div class="col-md-6"><a class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042">schoolloop</a></div>
+		  		<div class="col-md-6"><a href="contact-me.html">contact</a></div>
+			</div>
 	    </div>
 
 	    <div class="main-content">
@@ -30,9 +31,12 @@
 		    <select id="topic-selection">
 		    	<option value="cc-7th-add-negatives">Adding negative numbers</option>
 		    	<option value="cc-7th-sub-neg-intro">Subtracting negative numbers</option>
-		    	<option value="cc-7th-add-and-sub-integers">Adding and Subtracting Integers</option>
+		    	<option value="cc-7th-add-and-sub-integers">Adding and subtracting integers</option>
+		    	<option value="cc-7th-add-sub-neg-number-line">Adding and subtracting with negatives on the number line</option>
+		    	<option value="cc-7th-add-sub-neg-fractions">Adding and subtracting negative fractions</option>
+		    	<option value="cc-7th-add-sub-word-problems-w-negatives">Addition and subtraction word problems with negatives</option>
 		    </select>
-		    <button onclick="request()">Submit</button>
+		    <button class="btn btn-lg btn-primary" onclick="request()">Submit</button>
 		    <div> 
 		    	<ul id="video-list">
 
