@@ -19,7 +19,7 @@ function createExerciseList(response) {
     // Loops through every exercise returned by Khan Academy API and creates list item
     for (var i = 0; i < exercises.length; i++) {
 
-        exercisesList += '<li><a target="_blank" href="'+exercises[i].ka_url+'">' + exercises[i].title +'</a><p>' + exercises[i].translated_description+ '</p></li>'
+        exercisesList += '<li><a target="_blank" href="'+exercises[i].ka_url+'"><u>Exercises</u>: ' + exercises[i].title +'</a><p><u>Description</u>: ' + exercises[i].translated_description+ '</p></li>'
     }
     // Appends exercise list to the page
     document.getElementById("exercises-list").innerHTML = exercisesList;
@@ -33,7 +33,7 @@ function request() {
     // Construct API request based off user selected topic
     var url = 'http://www.khanacademy.org/api/v1/topic/' + topic +'/videos';
     // Passing callback method to create and append video list if the readyState of the xhr request
-    // returns with a 4 ('request finished and response is ready') and status is 200("OK")
+    // returns with a 4 ('request finished and response is ready') and status is 200('OK')
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             createPlaylist(xhr.response);

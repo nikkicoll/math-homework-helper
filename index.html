@@ -2,44 +2,59 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        <title>Math | Homework</title>
-    	<!--All CSS goes here-->
+        <title>Math 7</title>
+    	<!--Links CSS files-->
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
 	<body>
 		<div class="header">
-			<h1>welcome | math 7 </h1>
-			<div class="row">
-		  		<div class="col-md-6"><a class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042">schoolloop</a></div>
-		  		<div class="col-md-6"><a href="contact-me.html">contact</a></div>
-			</div>
-	    </div>
+			<p>welcome</p>
+		</div>
+
+		<div class="nav">
+			<!--Students can check grades-->
+	  		<div class="col-md-4"><a target="_blank" class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> GRADES</a></div>
+	  		<!--Students can visit school website-->
+	  		<div class="col-md-4"><a target="_blank" href="https://phms.schoolloop.com/"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> PHMS</a></div>
+	  		<!--Students can find teacher contact info-->
+	  		<div class="col-md-4"><a target="_blank" href="contact-me.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> CONTACT</a></div>
+		</div>
 
 	    <div class="main-content">
 
-			<p> Hello Scholars! <br>
+			<p>Dear scholars,
 			<br>
-		    This is our class website where you'll find your weekly math homework. <br>
-		    <br>
-		    <strong>Please watch the video before beginning your daily practice.<br></strong>
-		    <br></p>
+			<br>
+			Your homework will be assigned by topic. In each topic, there are videos [under "<strong>videos</strong>" section below] and exercises [under "<strong>homework</strong>" section below]. The exercises you need to complete will be assigned in class. I highly recommend watching the videos before completing your homework. Lastly, remember to have fun!
+			<br>
+			<br>
+			Sincerely,
+			<br>
+			Ms. Galusha</p>
 
 
 		    <h2 class= "daily-lesson" id="video">videos</h2>
 
-		    <select id="topic-selection">
+		    <select id="topic-selection" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		    	<option>Select topic here</option>
 		    	<option value="cc-7th-add-negatives">Adding negative numbers</option>
 		    	<option value="cc-7th-sub-neg-intro">Subtracting negative numbers</option>
 		    	<option value="cc-7th-add-and-sub-integers">Adding and subtracting integers</option>
 		    	<option value="cc-7th-add-sub-neg-number-line">Adding and subtracting with negatives on the number line</option>
 		    	<option value="cc-7th-add-sub-neg-fractions">Adding and subtracting negative fractions</option>
 		    	<option value="cc-7th-add-sub-word-problems-w-negatives">Addition and subtraction word problems with negatives</option>
+		    	<option value="cc-7th-mult-div-negatives">Multiply and divide negative numbers</option>
+		    	<option value="cc-7th-mult-div-neg-word-problems">Multiplication and division word problems with negatives</option>
+		    	<option value="cc-7th-mult-div-neg-fractions">Multiply and divide negative fractions</option>
+		    	<option value="cc-7th-mult-div-fractions-2">Understanding multiplying and dividing fractions</option>	
 		    </select>
-		    <button class="btn btn-lg btn-primary" onclick="request()">Submit</button>
+		    <button class="btn btn-default btn-sm" onclick="request()">Submit</button>
+		    <br>
+		    <br>
 		    <div> 
 		    	<ul id="video-list">
-
+		    	<br>
 		    	</ul>
 		    </div>
 
@@ -50,7 +65,7 @@
 		    	</ul>
 		     </div>
     	</div>
-
+    	<!--links Javascript file-->
     	<script type="text/javascript" src="script.js"></script>
 
 	</body>
