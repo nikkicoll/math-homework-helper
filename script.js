@@ -5,13 +5,13 @@ function window_onload() {
 var sidebar_top = 100;
 
 function sidebar_reset_top() {
-
+  //Gets the scroll position
   var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
 
   if(scrollTop > sidebar_top && sidebar.className === "sidebar_absolute") {
-    document.getElementById("sidebar").className="sidebar_fixed";
+    document.getElementById("sidebar").className = "sidebar_fixed";
   } else if (scrollTop < sidebar_top && sidebar.className === "sidebar_fixed") {
-    document.getElementById("sidebar").className="sidebar_absolute";
+    document.getElementById("sidebar").className = "sidebar_absolute";
     }
 }
 
