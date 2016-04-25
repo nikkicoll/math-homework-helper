@@ -1,40 +1,90 @@
-
-.nav {
-    text-align: center;
-    text-size: 45px;
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
 }
 
-.header { 
-    color: #ff4a4a; 
-    font-family: "Great Vibes", cursive; 
-    font-size: 150px; 
-    line-height: 145px; 
-    font-weight: normal; 
-    margin-bottom: 0px; 
-    margin-top: 40px; 
-    text-align: center; 
-    text-shadow: 0 1px 1px #fff; 
-    border-bottom: 2px;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.main-content {
-	border-style: solid;
-	border-color: black;
-	padding: 10px 25px 25px 25px;
-	width: 900px;
-	margin: 20px auto 0 auto;
+body {
+  background-color: #ccffee;
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.header {
+  background-color: #00cc99;
+  width: 950px;
 }
 
-.daily-lesson {
-	border-bottom: 2px solid rgb(221,160,221);
-	padding-bottom: 3px;
+.header h1 {
+  color: #ffffff;
+  padding: 10px 70px 70px 20px;
+  font-size: 35px;
+  background-color: #e6005c;
+  background-position: center;
+  width: 250px;
+  height: 60px;
+  position: relative;
+  
+
+}
+
+.header h2 {
+  color: #ffffff;
+  padding: 5%;
+  font-size: 70px;
+  width: 600px;
+  
+}
+
+.header h2 #author {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.side-bar {
+  float: right;
+  background-color: #80ccff;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+}
+
+.math-info {
+  width: 600px;
+  margin: 20px auto;
+  padding: 50px;
+  border-width: 10px;
+  background-color: #ffffff;
+}
+
+.how-to-info {
+  color: #ffffff;
+  background-color: #3385ff;
+  margin: 10px auto;
+  padding: 40px;
+  width: 450px;
+  height: 400px;
+
+
+}
+
+.math-videos {
+  background-color: #ffffff;
+  width: 750px;
+  padding: 20px;
+
+}
+
+.math-exercises {
+  background-color: #ffffff;
+  width: 750px;
+  padding: 30px;
+}
+
+h2 {
+
 }
 
 

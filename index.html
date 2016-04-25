@@ -2,39 +2,54 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-        <title>Math 7</title>
+        <title>Welcome | Math 7</title>
     	<!--Links CSS files-->
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
+
 	<body>
 		<div class="header">
-			<p>welcome</p>
+			<h1>| Math 7</h1>
+			<h2 id="quote">You never fail until you stop trying<br>
+			-Albert Einstein</h2>
+
 		</div>
 
-		<div class="nav">
-			<!--Students can check grades-->
-	  		<div class="col-md-4"><a target="_blank" class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> GRADES</a></div>
-	  		<!--Students can visit school website-->
-	  		<div class="col-md-4"><a target="_blank" href="https://phms.schoolloop.com/"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> PHMS</a></div>
-	  		<!--Students can find teacher contact info-->
-	  		<div class="col-md-4"><a target="_blank" href="contact-me.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> CONTACT</a></div>
+		<div class="side-bar">
+			<h2>Useful Resources:</h2>
+			<!--Link to grades-->
+	  		<a target="_blank" class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042"><span>Grades</span></a><br>
+	  		<br>
+	  		<!--Link to school website-->
+	  		<a target="_blank" href="https://phms.schoolloop.com/"><span>Phms</span></a><br>
+	  		<br>
+	  		<!--Link to contact info-->
+	  		<a target="_blank" href="contact-me.html"><span>Contact</span></a><br>
+	  		<br>
+	  		<!--Link to Khan Academy-->
+	  		<a target="_blank" href="https://khanacademy.org"><span>Khan Academy</span></a>
 		</div>
 
-	    <div class="main-content">
+	    <div class="math-info">
+		    <p>By the end of grade seven, students will be adept at manipulating numbers and equations and understand
+			the general principles at work. Students will gain a deeper understanding of rational numbers and their
+			various forms of representation. They will increase their understanding of ratio and proportion and apply
+			this knowledge to topics such as slopes of lines and the change in volume and surface area of basic threedimensional
+			figures when the scale is changed. Students will make conversions between different units
+			measurement and compute percents of change and simple and compound interest.</p>
+			<p>In addition, students
+			will know the Pythagorean Theorem and solve problems involving computing a missing side.</p>
+			<p>Since the seventh grade standards constitute the core content for the mathematics portion of the Californa High School Exit Exam (CAHSEE), it is essential that students become proficient in the key standards. </p>
+	    </div>
 
-			<p>Dear scholars,
-			<br>
-			<br>
-			Your homework will be assigned by topic. In each topic, there are videos [under "<strong>videos</strong>" section below] and exercises [under "<strong>homework</strong>" section below]. The exercises you need to complete will be assigned in class. I highly recommend watching the videos before completing your homework. Lastly, remember to have fun!
-			<br>
-			<br>
-			Sincerely,
-			<br>
-			Ms. Galusha</p>
+	    <div class="how-to-info">
+			<p>Nightly homework will be assigned by topic. From the dropdown menu, students will select the topic we are currently working through. Then, once the topic is selected, there are videos (under "<strong>videos</strong>" section below) and exercises (under "<strong>homework</strong>" section below) available.</p>
+			<p> The required exercises will be assigned in class. I highly recommend watching the videos before completing the exercises and remember, have fun!</p>
+		</div>
 
+		<div class="math-videos">
 
-		    <h2 class= "daily-lesson" id="video">videos</h2>
+		    <h2>videos</h2>
 
 		    <select id="topic-selection" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 		    	<option>Select topic here</option>
@@ -47,30 +62,37 @@
 		    	<option value="cc-7th-mult-div-negatives">Multiply and divide negative numbers</option>
 		    	<option value="cc-7th-mult-div-neg-word-problems">Multiplication and division word problems with negatives</option>
 		    	<option value="cc-7th-mult-div-neg-fractions">Multiply and divide negative fractions</option>
-		    	<option value="cc-7th-mult-div-fractions-2">Understanding multiplying and dividing fractions</option>	
+		    	<option value="cc-7th-mult-div-fractions-2">Understanding multiplying and dividing fractions</option>
+		    	<option value="cc-7th-rates">Rate problems with fractions</option>	
+		    	<option value="cc-7th-write-and-solve-proportions">Writing and solving proportions</option>
+		    	<option value="cc-7th-unknown-angle-algebra">Unknown angle algebra problems</option>
 		    </select>
+
 		    <button class="btn btn-default btn-sm" onclick="request()">Submit</button>
 		    <br>
 		    <br>
 		    <div> 
-		    	<ul id="video-list">
+		    	<ul id="video-list" style="list-style-type:none">
 		    	<br>
 		    	</ul>
-		    </div>
+			</div>
+		</div>
 
-	    	<h2 class= "daily-lesson" id="homework">homework</h2>
+		<div class="math-exercises">
+
+	    	<h2>homework</h2>
+
 	    	 <div> 
-		    	<ul id="exercises-list">
-
+		    	<ul id="exercises-list" style="list-style-type:none">
 		    	</ul>
 		     </div>
+
     	</div>
+
     	<!--links Javascript file-->
     	<script type="text/javascript" src="script.js"></script>
 
 	</body>
-
-
 </html>
 
 
