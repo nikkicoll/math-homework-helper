@@ -24,7 +24,7 @@ body {
   color: #ffffff;
   padding: 10px 15px 10px 10px;
   font-size: 35px;
-  background-color: #e6005c;
+  background-color: #ff6699;
   background-position: center;
   width: 250px;
   height: 60px;
@@ -113,4 +113,16 @@ a:visited {
 }
 
 /*Contact me page styling*/
+.contact-info {
+  width: 900px;
+  background-color: #ff9999;
+  color: #ffffff;
+  margin: 20px 20px;
+  left: 10;
+  padding: 10%;
+  font-size: 25px;
+  background-position: center;
+  width: 900px;
+  position: absolute;
+}
 

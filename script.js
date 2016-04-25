@@ -1,16 +1,19 @@
-//Keeps resources side bar in place while scrolling
 function window_onload() {
-  window.addEventListener("scroll", sidebar_reset_top,false);
+  window.addEventListener("scroll", sidebar_reset_top, false);
 }
 
 var sidebar_top = 100;
 
 function sidebar_reset_top() {
-  var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+
+  var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+
   if(scrollTop > sidebar_top && sidebar.className === "sidebar_absolute") {
     document.getElementById("sidebar").className="sidebar_fixed";
-  } else if(scrollTop < sidebar_top && sidebar.className === "sidebar_fixed") {
+  } else if (scrollTop < sidebar_top && sidebar.className === "sidebar_fixed") {
     document.getElementById("sidebar").className="sidebar_absolute";
+  } else (sidebar_top > 900) {
+    document.getElementById("sidebar").className="sidebar_fixed";
   }
 
 }
