@@ -1,3 +1,19 @@
+//Keeps resources side bar in place while scrolling
+function window_onload() {
+  window.addEventListener("scroll", sidebar_reset_top,false);
+}
+
+var sidebar_top = 100;
+
+function sidebar_reset_top() {
+  var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+  if(scrollTop > sidebar_top && sidebar.className === "sidebar_absolute") {
+    document.getElementById("sidebar").className="sidebar_fixed";
+  } else if(scrollTop < sidebar_top && sidebar.className === "sidebar_fixed") {
+    document.getElementById("sidebar").className="sidebar_absolute";
+  }
+
+}
 
 function createPlaylist(response) {
     // Converts string response into object
@@ -19,7 +35,7 @@ function createExerciseList(response) {
     // Loops through every exercise returned by Khan Academy API and creates list item
     for (var i = 0; i < exercises.length; i++) {
 
-        exercisesList += '<li><a target="_blank" href="'+exercises[i].ka_url+'"><u>Exercises</u>: ' + exercises[i].title +'</a><p><u>Description</u>: ' + exercises[i].translated_description+ '</p></li>'
+        exercisesList += '<li><a target="_blank" href="'+exercises[i].ka_url+'">Exercises: ' + exercises[i].title +'</a></li><br><li>' + exercises[i].translated_description+ '</li><br>'
     }
     // Appends exercise list to the page
     document.getElementById("exercises-list").innerHTML = exercisesList;
