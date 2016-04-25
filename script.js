@@ -12,10 +12,7 @@ function sidebar_reset_top() {
     document.getElementById("sidebar").className="sidebar_fixed";
   } else if (scrollTop < sidebar_top && sidebar.className === "sidebar_fixed") {
     document.getElementById("sidebar").className="sidebar_absolute";
-  } else (sidebar_top > 900) {
-    document.getElementById("sidebar").className="sidebar_fixed";
-  }
-
+    }
 }
 
 function createPlaylist(response) {
