@@ -1,32 +1,46 @@
-function sideScroll () {
-    var sidebarPos = document.getElementById("sidebar")
+//Iterates over every element in a collection (an array or object)
+function each(coll, f) {
+    if(Array.isArray(coll)) {
+        for (var i = 0; i < coll.length; i++) {
+            f(coll[i],i);
+        }
+    } else {
+        for (var key in coll) {
+            f(coll[key], key);
+        }
+    }
 }
 
 function createPlaylist(response) {
     // Converts string response into object
     var videos = JSON.parse(response);
-
     var videoList = "";
     // Loops through every video returned by the Khan Academy API and creates a list item
-    for (var i = 0; i < videos.length; i++) {
-        videoList += '<li><iframe width="560" height="315" src="https://www.youtube.com/embed/'+ videos[i].youtube_id +'" frameborder="0" allowfullscreen></iframe></li>'
-    }
+    each(videos, function(video){
+        videoList += '<li><iframe width="560" height="315" src="https://www.youtube.com/embed/'+ video.youtube_id +'" frameborder="0" allowfullscreen></iframe></li>';
+    })
     // Appends video list to the page 
     document.getElementById("video-list").innerHTML = videoList;
 }
 
 function createExerciseList(response) {
     var exercises = JSON.parse(response);
-
     var exercisesList = "";
     // Loops through every exercise returned by Khan Academy API and creates list item
-    for (var i = 0; i < exercises.length; i++) {
-
-        exercisesList += '<li><a target="_blank" href="'+exercises[i].ka_url+'">Exercises: ' + exercises[i].title +'</a></li><br><li>' + exercises[i].translated_description+ '</li><br>'
-    }
+    each(exercises, function(exercise) {
+        exercisesList += '<li><a target="_blank" href="'+exercise.ka_url+'">Exercises: ' + exercise.title +'</a></li><br><li>' + exercise.translated_description+ '</li><br>'
+    })
     // Appends exercise list to the page
     document.getElementById("exercises-list").innerHTML = exercisesList;
 }
+
+/*//Creates list of user-specific stats(last done, longest streak, points, total correct, total done)
+function createUserStats(response) {
+    var userExerciseLog = JSON.parse(reponse);
+    var userStats ="";
+    each (userExerciseLog, function())
+
+}*/
 
 function request() {
     // Gets value of user selected topic
