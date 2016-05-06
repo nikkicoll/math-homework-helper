@@ -8,12 +8,12 @@ html {
 }
 
 body {
-  background-color: #ccffee;
+  background-color: #cccccc;
   font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
 }
 
 .header {
-  background-color: #00cc99;
+  background-color: #74AFAD;
   width: 850px;
   height: 500px;
   margin: 10px 15px 10px 30px;
@@ -25,7 +25,7 @@ body {
   color: #ffffff;
   padding: 10px 15px 10px 10px;
   font-size: 35px;
-  background-color: #ff6699;
+  background-color: #963644;
   background-position: center;
   width: 250px;
   height: 60px;
@@ -50,7 +50,7 @@ body {
   position: absolute;
   right: 40px;
   color: #ffffff;
-  background-color: #80ccff;
+  background-color: #558C89;
   width: 300px;
   height: 500px;
   text-align: left;
@@ -90,7 +90,7 @@ a:visited {
   background-color: #ffffff;
   width: 900px;
   padding: 30px;
-  margin: 0px auto 60px auto;
+  margin: 0px auto 10px auto;
 }
 
 .math-content h2 {
@@ -105,17 +105,32 @@ a:visited {
   text-align: left;
 }
 
+.books {
+  background-color: #558C89;
+  width: 1200px;
+  height: 300px;
+  margin: 10px auto 10px auto;
+}
+
+.books h2 {
+  text-align: center;
+  padding: 1%;
+  color: #ffffff;
+}
+
+.books li {
+  display: inline;
+}
 /*Contact me link styling*/
 .contact-info {
   width: 900px;
-  background-color: #ff9999;
+  background-color: #74AFAD;
   color: #ffffff;
-  margin: 20px 20px;
+  margin: auto auto;
   left: 10;
   padding: 10%;
   font-size: 25px;
   background-position: center;
   width: 900px;
-  position: absolute;
 }
 
