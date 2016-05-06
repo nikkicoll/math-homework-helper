@@ -14,8 +14,9 @@ body {
 
 .header {
   background-color: #00cc99;
-  width: 900px;
-  height: 550px;
+  width: 850px;
+  height: 500px;
+  margin: 10px 15px 10px 30px;
 }
 
 .header h1 {
@@ -44,14 +45,14 @@ body {
 }
 
 .side-bar {
-  top: 100px;
+  top: 60px;
   bottom: 0px;
   position: absolute;
-  right: 50px;
+  right: 40px;
   color: #ffffff;
   background-color: #80ccff;
   width: 300px;
-  height: 700px;
+  height: 500px;
   text-align: left;
 }
 
@@ -72,8 +73,8 @@ a:visited {
 }
 
 .curric-info {
-  width: 600px;
-  margin: 20px auto 20px 80px;
+  width: 900px;
+  margin: 30px auto 30px auto;
   padding: 50px;
   border-width: 10px;
   background-color: #ffffff;
@@ -85,22 +86,11 @@ a:visited {
   overflow: auto;
 }
 
-.how-to-info {
-  color: #ffffff;
-  background-color: #3385ff;
-  padding: 40px;
-  width: 400px;
-  font-size: 20px;
-  float: left;
-  margin: 20px;
-}
-
 .math-content {
   background-color: #ffffff;
-  width: 700px;
+  width: 900px;
   padding: 30px;
-  float: right;
-  margin: 60px;
+  margin: 0px auto 60px auto;
 }
 
 .math-content h2 {
@@ -108,10 +98,6 @@ a:visited {
   border-bottom-color: #000000;
   border-bottom-style: solid;
   border-bottom-width: 3px;
-}
-
-ul .exercises-list {
-  text-align: left;
 }
 
 .math-exercises a {
