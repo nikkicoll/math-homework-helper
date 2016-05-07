@@ -33,20 +33,20 @@ function createExerciseList(response) {
     var exercisesList = "";
     // Loops through every exercise returned by Khan Academy API and creates list item
     each(exercises, function(exercise) {
-        exercisesList += '<li align="center"><a target="_blank" href="'+exercise.ka_url+ '">Exercises: '+exercise.title+'</a></li><br><li align="center">Description: '+ exercise.translated_description+ '</li><br>';
+        exercisesList += '<li align="center"><a target="_blank" href="'+exercise.ka_url+ '">Exercises: '+exercise.title+'</a></li><br><li align="center">Description: ' + exercise.translated_description+ '</li><br>';
     })
     // Appends exercise list to the page
     document.getElementById("exercises-list").innerHTML = exercisesList;
 }
 
 //Goal: have list of book images that when clicked takes students to a preview of that book
-//Creates suggested reading list
+//Creates suggested reading list based on 7th grade math search
 function appendBooks(response) {
     var books = JSON.parse(response);
     console.log(books);
     var booksList = "";
     for (var i = 0; i < books.items.length; i++) {
-        booksList += '<li><a target ="_blank" href ="' + books.items[i].accessInfo.webReaderLink + '"><img src="' + books.items[i].volumeInfo.imageLinks.smallThumbnail +'">Title: ' + books.items[i].volumeInfo.title+'</a></li>';
+        booksList += '<li id="books-list"><a target ="_blank" href ="' + books.items[i].accessInfo.webReaderLink + '"><img src="' + books.items[i].volumeInfo.imageLinks.smallThumbnail +'"></a></li>';
     }
      document.getElementById("books-list").innerHTML = booksList;
 }
@@ -79,21 +79,20 @@ function request() {
     }
     exercisesRequest.open("GET", exercisesURL, true);
     exercisesRequest.send();
-
 }
 
 //Requests access to Google Books API
 function searchGoogle () {
     var xhr = new XMLHttpRequest();
-    // Construct API request based off user selected to
-    var url = 'https://www.googleapis.com/books/v1/volumes?q=7th+grade+math&download=epub&key='+apiKey;
+    // Construct API request based off 7th grade math search
+    var url = 'https://www.googleapis.com/books/v1/volumes?q=middle+school+math&download=epub&key='+apiKey;
     // Passing callback method to create and append video list if the readyState of the xhr request
     // returns with a 4 ('request finished and response is ready') and status is 200('OK')
     xhr.open("GET", url, true);
     xhr.send();
-    // Repeat same action but with exercises
+    // Repeat same action but with books
     var bookRequest = new XMLHttpRequest();
-    var bookURL = 'https://www.googleapis.com/books/v1/volumes?q=7th+grade+math&download=epub&key='+apiKey;
+    var bookURL = 'https://www.googleapis.com/books/v1/volumes?q=middle+school+math&download=epub&key='+apiKey;
 
     bookRequest.onreadystatechange = function() {
         if (bookRequest.readyState === 4 && bookRequest.status === 200) {

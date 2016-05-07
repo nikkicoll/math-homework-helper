@@ -40,8 +40,8 @@ body {
 }
 
 .side-bar h2 {
-    padding: 10%;
-    font-size: 25px;
+  padding: 10%;
+  font-size: 25px;
 }
 
 .side-bar {
@@ -106,22 +106,39 @@ a:visited {
 }
 
 .books {
-  overflow: auto;
+  overflow-x: scroll;
   background-color: #558C89;
-  width: 1200px;
+  width: 1100px;
   height: 300px;
-  margin: 10px auto 10px auto;
+  margin: 10px auto 50px auto;
 }
 
 .books h2 {
   text-align: center;
-  padding: 1%;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.books h4 {
+  text-align: center;
   color: #ffffff;
 }
 
-.books li {
+#books-list {
   display: inline;
+  margin: 20px auto;
 }
+
+#books-list a {
+  display: table-cell;
+  text-align: center;
+}
+
+#books-list img {
+  width: 100%;
+  max-width: 150px;
+}
+
 /*Contact me link styling*/
 .contact-info {
   width: 900px;
