@@ -21,7 +21,7 @@ function createPlaylist(response) {
     var videoList = "";
     // Loops through every video returned by the Khan Academy API and creates a list item
     each(videos, function(video){
-        videoList += '<li align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+ video.youtube_id +'" frameborder="0" allowfullscreen></iframe></li>';
+        videoList += '<li align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+video.youtube_id+'" frameborder="0" allowfullscreen></iframe></li>';
     })
     // Appends video list to the page 
     document.getElementById("video-list").innerHTML = videoList;
@@ -33,7 +33,7 @@ function createExerciseList(response) {
     var exercisesList = "";
     // Loops through every exercise returned by Khan Academy API and creates list item
     each(exercises, function(exercise) {
-        exercisesList += '<li align="center"><a target="_blank" href="'+exercise.ka_url+'">Exercises: ' + exercise.title +'</a></li><br><li align="center">Description: ' + exercise.translated_description+ '</li><br>';
+        exercisesList += '<li align="center"><a target="_blank" href="'+exercise.ka_url+ '">Exercises: '+exercise.title+'</a></li><br><li align="center">Description: '+ exercise.translated_description+ '</li><br>';
     })
     // Appends exercise list to the page
     document.getElementById("exercises-list").innerHTML = exercisesList;
@@ -46,7 +46,7 @@ function appendBooks(response) {
     console.log(books);
     var booksList = "";
     for (var i = 0; i < books.items.length; i++) {
-        booksList += '<li><a target ="_blank" href ="' + books.items[i].accessInfo.webReaderLink +'"><img src ="' + books.items[i].volumeInfo.imageLinks.smallThumbnail + '"> Title: ' + books.items[i].volumeInfo.title+'</a></li>';
+        booksList += '<li><a target ="_blank" href ="' + books.items[i].accessInfo.webReaderLink + '"><img src="' + books.items[i].volumeInfo.imageLinks.smallThumbnail +'">Title: ' + books.items[i].volumeInfo.title+'</a></li>';
     }
      document.getElementById("books-list").innerHTML = booksList;
 }

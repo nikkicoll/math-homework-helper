@@ -106,6 +106,7 @@ a:visited {
 }
 
 .books {
+  overflow: auto;
   background-color: #558C89;
   width: 1200px;
   height: 300px;
