@@ -106,11 +106,12 @@ a:visited {
 }
 
 .books {
-  overflow-x: scroll;
+  overflow-x: scroll; 
   background-color: #558C89;
   width: 1100px;
   height: 300px;
-  margin: 10px auto 50px auto;
+  margin: auto;
+  text-align: justify;
 }
 
 .books h2 {
@@ -125,18 +126,19 @@ a:visited {
 }
 
 #books-list {
-  display: inline;
-  margin: 20px auto;
+  display: inline-block;
+  margin: auto;
 }
 
 #books-list a {
-  display: table-cell;
+  display: inline;
   text-align: center;
 }
 
 #books-list img {
   width: 100%;
   max-width: 150px;
+  padding: 10%;
 }
 
 /*Contact me link styling*/
