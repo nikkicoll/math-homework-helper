@@ -1,5 +1,12 @@
+# Config Variables
 config.js
+
+# Dependency Directories
 node_modules
+
+# Settings
 .DS_Store
+
+# Build Tool Output
 www/bundle.js
 
