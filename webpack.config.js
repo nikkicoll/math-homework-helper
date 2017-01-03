@@ -1,7 +1,7 @@
-var path = require('path');
+const path = require('path');
 
-var config = {
-  context: path.join(__dirname, 'src'),
+const config = {
+  context: path.join(__dirname, 'client'),
   entry: [
     './main.js',
   ],
@@ -29,4 +29,5 @@ var config = {
     ],
   },
 };
+
 module.exports = config;

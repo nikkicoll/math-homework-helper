@@ -1,4 +1,4 @@
-import apiKey from 'config';
+const apiKey = require('../config.js');
 
 //Iterates over every element in a collection (an array or object)
 function each(coll, f) {
