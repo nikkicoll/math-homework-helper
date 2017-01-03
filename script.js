@@ -1,5 +1,4 @@
-//API Key needed to access Google Books API
-var apiKey = 'AIzaSyAfRai3-s-CRSF-VBvFPEg_M9qkXFyqXbU';
+import apiKey from 'config';
 
 //Iterates over every element in a collection (an array or object)
 function each(coll, f) {
@@ -23,7 +22,7 @@ function createPlaylist(response) {
     each(videos, function(video){
         videoList += '<li align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/'+video.youtube_id+'" frameborder="0" allowfullscreen></iframe></li>';
     })
-    // Appends video list to the page 
+    // Appends video list to the page
     document.getElementById("video-list").innerHTML = videoList;
 }
 

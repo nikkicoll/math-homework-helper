@@ -1,0 +1,19 @@
+{
+  "name": "nikkigalusha.github.io",
+  "version": "1.0.0",
+  "description": "Math homework helper for 7th graders",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikkigalusha/nikkigalusha.github.io.git"
+  },
+  "author": "Nikki Galusha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikkigalusha/nikkigalusha.github.io/issues"
+  },
+  "homepage": "https://github.com/nikkigalusha/nikkigalusha.github.io#readme"
+}
