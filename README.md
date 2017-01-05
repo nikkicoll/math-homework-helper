@@ -13,3 +13,6 @@ Ms. Galusha's Math 7 Curriculum Support Site
 
 ##Setup
 - [ ] Run `npm install`
+
+##Start Dev Server
+- [ ] Run `npm start`
