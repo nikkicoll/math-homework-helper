@@ -39,7 +39,7 @@ function createExerciseList(response) {
 }
 
 //Goal: have list of book images that when clicked takes students to a preview of that book
-//Creates suggested reading list based on middle school math google books data
+//Creates suggested reading list based on 7th grade math search
 function appendBooks(response) {
     var books = JSON.parse(response);
     console.log(books);
@@ -83,7 +83,7 @@ function request() {
 //Requests access to Google Books API
 function searchGoogle () {
     var xhr = new XMLHttpRequest();
-    // Construct API request based off middle school math search
+    // Construct API request based off 7th grade math search
     var url = 'https://www.googleapis.com/books/v1/volumes?q=middle+school+math&download=epub&key='+apiKey;
     // Passing callback method to create and append video list if the readyState of the xhr request
     // returns with a 4 ('request finished and response is ready') and status is 200('OK')
