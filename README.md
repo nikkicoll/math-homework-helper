@@ -1,7 +1,7 @@
 # Math 7 Homework Helper
 Ms. Galusha's Math 7 Curriculum Support Site
 
-[Visit nikkigalusha.github.io](nikkigalusha.github.io)
+[Visit math7helper.herokuapp.com/](https://math7helper.herokuapp.com/)
 
 ##Author
 * [Nikki Galusha](https://github.com/nikkigalusha)
