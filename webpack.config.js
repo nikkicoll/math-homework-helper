@@ -3,7 +3,7 @@ const path = require('path');
 const config = {
   context: path.join(__dirname, 'client'),
   entry: [
-    './main.js',
+    '../client/app/index.js',
   ],
   output: {
     path: path.join(__dirname, 'www'),

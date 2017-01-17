@@ -103,3 +103,65 @@ function searchGoogle () {
 }
 
 searchGoogle();
+
+    <div class="header">
+      <h1>| Math 7</h1>
+    </div>
+    <div class="curric-info" id="stds">
+      <h3>Homework Info</h3>
+      <p>Nightly homework will be assigned by topic. From the dropdown menu, students will select the topic we are currently working through. Then, once the topic is selected, there are videos (under "<strong>videos</strong>" section below) and exercises (under "<strong>homework</strong>" section below) available.</p>
+      <p> The required exercises will be assigned in class. I highly recommend watching the videos before completing the exercises and remember, have fun!</p>
+    </div>
+    <div class="side-bar" id="sidebar">
+      <h2>Useful Resources:</h2>
+      <!--Link to grades-->
+      <a target="_blank" class="active" href="https://phms.schoolloop.com/portal/login?d=x&return_url=1461444854042"><span>Grades</span></a><br><br>
+      <!--Link to school website-->
+      <a target="_blank" href="https://phms.schoolloop.com/"><span>Parkway Heights MS</span></a><br><br>
+      <!--Link to contact info-->
+      <a target="_blank" href="contact-me.html"><span>Contact</span></a><br><br>
+      <!--Link to class routine download-->
+      <a href="../assets/Math7ClassRoutine.pdf" download><span>Class Routine</span></a><br><br>
+      <!--Link to Khan Academy-->
+      <a target="_blank" href="https://khanacademy.org"><span>Khan Academy</span></a>
+    </div>
+    <div class="math-info">
+      <div class="math-content">
+        <div class="math-videos">
+          <h2>Videos</h2>
+          <select id="topic-selection" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <option>Select topic here</option>
+            <option value="cc-7th-add-negatives">Adding negative numbers</option>
+            <option value="cc-7th-sub-neg-intro">Subtracting negative numbers</option>
+            <option value="cc-7th-add-and-sub-integers">Adding and subtracting integers</option>
+            <option value="cc-7th-add-sub-neg-number-line">Adding and subtracting with negatives on the number line</option>
+            <option value="cc-7th-add-sub-neg-fractions">Adding and subtracting negative fractions</option>
+            <option value="cc-7th-add-sub-word-problems-w-negatives">Addition and subtraction word problems with negatives</option>
+            <option value="cc-7th-mult-div-negatives">Multiply and divide negative numbers</option>
+            <option value="cc-7th-mult-div-neg-word-problems">Multiplication and division word problems with negatives</option>
+            <option value="cc-7th-mult-div-neg-fractions">Multiply and divide negative fractions</option>
+            <option value="cc-7th-mult-div-fractions-2">Understanding multiplying and dividing fractions</option>
+            <option value="cc-7th-rates">Rate problems with fractions</option>
+            <option value="cc-7th-write-and-solve-proportions">Writing and solving proportions</option>
+            <option value="cc-7th-unknown-angle-algebra">Unknown angle algebra problems</option>
+          </select>
+          <button class="btn btn-default btn-sm" onclick="request()">Submit</button>
+          <br>
+          <br>
+          <div class="videos">
+            <ul id="video-list" style="list-style-type: none">
+              <br>
+            </ul>
+          </div>
+        </div>
+        <div class="math-exercises">
+          <h2>Homework</h2>
+          <ul id="exercises-list" style="list-style-type: none"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="books">
+      <h2>Suggested Reading</h2>
+      <h4>Click on book for book preview</h4>
+      <ul id="books-list" style="list-style-type: none"></ul>
+      <span class="stretch"></span>
